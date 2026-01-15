@@ -39,6 +39,14 @@ public class brad061 {
 		try(BufferedInputStream bin = 
 				new BufferedInputStream(conn.getInputStream())){
 			byte[] data = bin.readAllBytes();
+			
+			byte[] buffer = new byte[1024];
+			int li;
+			
+			while(li = (bin.read(buffer)) != -1) {
+				bout.writer(li, 0, buffer);
+			}
+			
 			return new String(data);
 		}
 		
