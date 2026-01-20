@@ -48,8 +48,6 @@ public class brad21 {
 			rs.updateDouble("lng", 123);
 			rs.insertRow();
 			
-			
-			
 		}catch(Exception e) {
 			System.out.println(e);
 		}
